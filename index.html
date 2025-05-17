@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gesture Recognition System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-blue-600 text-white py-4">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl font-bold">Gesture Recognition System</h1>
+      <p class="mt-2">Upload an image to detect hand gestures</p>
+    </div>
+  </header>
+  <main class="container mx-auto py-8">
+    <section class="bg-white p-6 rounded-lg shadow-lg max-w-lg mx-auto">
+      <div class="mb-4">
+        <label for="fileType" class="block text-lg font-medium mb-2">Select File Type:</label>
+        <select id="fileType" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="jpg">JPG</option>
+          <option value="png">PNG</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label for="imageUpload" class="block text-lg font-medium mb-2">Upload Image:</label>
+        <input type="file" id="imageUpload" accept="image/jpeg,image/png" class="w-full border p-2 rounded">
+      </div>
+      <div id="preview" class="mb-4 hidden">
+        <img id="previewImage" alt="Image Preview" class="max-w-full h-auto rounded shadow">
+      </div>
+      <button id="detectButton" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition disabled:bg-gray-400">Detect Gesture</button>
+      <div id="result" class="mt-4 p-4 bg-gray-100 rounded hidden" style="display: none; min-height: 50px;">
+        <p id="resultText" class="text-lg" style="color: black;"></p>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-blue-600 text-white py-4 mt-8">
+    <div class="container mx-auto text-center">
+      <p>© 2025 Gesture Recognition Project by Muhammad Saad Cheema</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
